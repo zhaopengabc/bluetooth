@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: zhaopeng zhaopeng, aaa, LIC=NQQMA-1IDPI-VENHA-15YX3-CWLZJ-T6267
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.35.0.2
+Toolchain Path:  d:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+D:\BLUETOOTH\赵宁原公司资料\新建文件夹\蓝牙离位基站程序 - BC35 -UDP\USER\ICAPTURE.uvprojx
+Project File Date:  04/12/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling uart4.c...
+..\HARDWARE\UART4\uart4.c(75): warning:  #550-D: variable "recv_data"  was set but never used
+  	char recv_data[128];
+..\HARDWARE\UART4\uart4.c(677): warning:  #177-D: variable "j"  was declared but never referenced
+  	unsigned char j=1;	
+..\HARDWARE\UART4\uart4.c(678): warning:  #177-D: variable "k"  was declared but never referenced
+  	unsigned char k=0;	
+..\HARDWARE\UART4\uart4.c(679): warning:  #177-D: variable "Bluetooh_ID"  was declared but never referenced
+  	unsigned char Bluetooh_ID[20]={0x00};			
+..\HARDWARE\UART4\uart4.c(680): warning:  #177-D: variable "Package_DATA"  was declared but never referenced
+  	unsigned char Package_DATA[120]={0x00};	//离位标签数据堆栈用。
+..\HARDWARE\UART4\uart4.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=56408 RO-data=1544 RW-data=2632 ZI-data=30840  
+FromELF: creating hex file...
+"..\hex\ICAPTURE.axf" - 0 Error(s), 5 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  d:\Users\zhaopeng\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
