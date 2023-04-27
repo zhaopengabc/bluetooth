@@ -76,3 +76,4 @@
 ..\obj\main.o: ..\HARDWARE\PROALY\app.h
 ..\obj\main.o: ..\HARDWARE\W5500\W5500\w5500_ctl.h
 ..\obj\main.o: ..\HARDWARE\APPATcmd\PrinterATcmd.h
+..\obj\main.o: ..\HARDWARE\APPNET\usart3.h

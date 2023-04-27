@@ -13,6 +13,7 @@ DE_1010
 #include "app.h"
 #include "w5500_ctl.h"
 #include "PrinterATcmd.h"
+#include "usart3.h"
 /************************************************
 更新日志：
 1.20180507 
@@ -145,7 +146,6 @@ int main(void)
 	
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); //中断分组配置
 	bsp_init();
-	
 	OSInit(&err);		//初始化UCOSIII
 	OS_CRITICAL_ENTER();//进入临界区
 	//创建开始任务
@@ -526,10 +526,11 @@ void SendToServer_task(void *p_arg)
 extern void BT_PeriodTask(void);
 void RecieveFromServer_task(void *p_arg)
 {
+		u8 Res;
 	OS_ERR err;
 	CPU_TS ts;
 	unsigned char flag=0;
-
+unsigned char sendData[16]="+++";
 	p_arg = p_arg;
 
 		
@@ -545,7 +546,10 @@ void RecieveFromServer_task(void *p_arg)
 #endif
 		printf("2.接收任务启动！");
 		RecieveTaskFeed();
-		
+	
+		//USART3_Send_Data(sendData,3);
+		//Res = USART_ReceiveData(USART3);
+		//printf("----------%d \n",Res);
 		BT_PeriodTask();     //远程升级周期判定；
 				
 		OSTimeDlyHMSM(0,0,1,100,OS_OPT_TIME_HMSM_STRICT,&err);
@@ -612,7 +616,7 @@ void prehost_task(void *p_arg)
 //	SDdata_Init();
 //	ProID_Init();
 //  ID_Print();
- 	printf("%s！\n\r",FB1010_sv);
+ 	printf("%s\n\r",FB1010_sv);
 	
 	TIM2_Int_Init(1000,7200);	//解析周期100mS；	
 #ifdef	XYB_DYJ	

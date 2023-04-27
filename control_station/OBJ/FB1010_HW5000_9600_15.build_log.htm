@@ -21,72 +21,56 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-D:\BLUETOOTH\赵宁原公司资料\FB1010A_OSV1.0_11SFa\FB1010A_OSV1.0_11SFa\USER\Template.uvprojx
-Project File Date:  04/12/2023
+D:\BLUETOOTH\bluetooth\control_station\USER\Template.uvprojx
+Project File Date:  04/13/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling system_stm32f10x.c...
+compiling ReceiveDataBuffer.c...
+..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(281): warning:  #177-D: variable "i"  was declared but never referenced
+  	unsigned char i=0;
+..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(370): warning:  #223-D: function "delay_ms" declared implicitly
+  		delay_ms(1);
+..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(197): warning:  #177-D: variable "CAN_Rx_Cnt"  was declared but never referenced
+  static unsigned char CAN_Rx_Cnt=0;
+..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(201): warning:  #177-D: function "Reset_CANRxBuf"  was declared but never referenced
+  static void Reset_CANRxBuf(void)
+..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c: 4 warnings, 0 errors
+compiling D026_HW200.c...
+..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\HARDWARE\PROALY\PluginClib\D026_HW200.c(101): warning:  #177-D: variable "Status"  was declared but never referenced
+  	unsigned short Status=0;
+..\HARDWARE\PROALY\PluginClib\D026_HW200.c(305): warning:  #177-D: variable "Senddata"  was declared but never referenced
+  	unsigned char Senddata=0x51;  
+..\HARDWARE\PROALY\PluginClib\D026_HW200.c(333): warning:  #177-D: variable "len"  was declared but never referenced
+  	unsigned int len=0;
+..\HARDWARE\PROALY\PluginClib\D026_HW200.c: 4 warnings, 0 errors
 compiling main.c...
 ..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
   #endif 
-main.c(608): warning:  #177-D: variable "ts"  was declared but never referenced
+main.c(530): warning:  #177-D: variable "Res"  was declared but never referenced
+  		u8 Res;
+main.c(534): warning:  #177-D: variable "sendData"  was declared but never referenced
+  unsigned char sendData[16]="+++";
+main.c(613): warning:  #177-D: variable "ts"  was declared but never referenced
   	CPU_TS ts;
-main.c(609): warning:  #177-D: variable "flag"  was declared but never referenced
+main.c(614): warning:  #177-D: variable "flag"  was declared but never referenced
   	unsigned char flag=0;
-main.c(717): warning:  #550-D: variable "flag"  was set but never used
+main.c(722): warning:  #550-D: variable "flag"  was set but never used
   	unsigned char flag=0;
-main.c(809): warning:  #177-D: variable "data"  was declared but never referenced
+main.c(814): warning:  #177-D: variable "data"  was declared but never referenced
   	char data[0x20];
-main.c(810): warning:  #177-D: variable "nbr"  was declared but never referenced
+main.c(815): warning:  #177-D: variable "nbr"  was declared but never referenced
   	unsigned int nbr=0;
-main.c(811): warning:  #177-D: variable "W5500state"  was declared but never referenced
+main.c(816): warning:  #177-D: variable "W5500state"  was declared but never referenced
   	unsigned char W5500state=0;
-main.c(812): warning:  #177-D: variable "Initstate"  was declared but never referenced
+main.c(817): warning:  #177-D: variable "Initstate"  was declared but never referenced
   	static unsigned char Initstate=0;
-main.c: 8 warnings, 0 errors
-compiling RecieveFromServer.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\RecieveFromServer.c(13): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  	memset(pServer_Data->data,0,SERVER_DATA_NUM);
-..\HARDWARE\RecieveFromServer.c(328): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
-  	Data_RecieveFromServer.Lenth=Net_Rx_Read(Data_RecieveFromServer.data);
-..\HARDWARE\RecieveFromServer.c(332): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
-  		Flag=ServerData_Integrity(Data_RecieveFromServer.data,Data_RecieveFromServer.Lenth);
-..\HARDWARE\RecieveFromServer.c(335): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
-  			Flag=RecieveFromServer_Error_Action(Data_RecieveFromServer.data,Data_RecieveFromServer.Lenth);
-..\HARDWARE\RecieveFromServer.c(339): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "unsigned char *"
-  			Flag=RecieveFromServer_Correct_Action(Data_RecieveFromServer.data,Data_RecieveFromServer.Lenth);
-..\HARDWARE\RecieveFromServer.c: 6 warnings, 0 errors
-compiling frame.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\frame.c: 1 warning, 0 errors
-compiling mainpower.c...
-..\HARDWARE\mainpower.c(175): warning:  #550-D: variable "AD1"  was set but never used
-  	u32 AD1=0,AD2=0;
-..\HARDWARE\mainpower.c(175): warning:  #177-D: variable "AD2"  was declared but never referenced
-  	u32 AD1=0,AD2=0;
-..\HARDWARE\mainpower.c(232): warning:  #550-D: variable "AD1"  was set but never used
-  	u32 AD1=0,AD2=0;
-..\HARDWARE\mainpower.c(232): warning:  #550-D: variable "AD2"  was set but never used
-  	u32 AD1=0,AD2=0;
-..\HARDWARE\mainpower.c(291): warning:  #177-D: variable "err"  was declared but never referenced
-  	OS_ERR err;
-..\HARDWARE\mainpower.c: 5 warnings, 0 errors
-compiling Voice.c...
-compiling buzzer.c...
-compiling stm32f10x_it.c...
-compiling SendToServer.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\SendToServer.c: 1 warning, 0 errors
-compiling bsp_FB1000Y.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\bsp_FB1000Y.c: 1 warning, 0 errors
+main.c(880): warning:  #177-D: variable "sendData"  was declared but never referenced
+  		unsigned char sendData[128]="+++";
+main.c: 11 warnings, 0 errors
 compiling rtc.c...
 ..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -95,37 +79,6 @@ compiling rtc.c...
 ..\HARDWARE\rtc.c(334): warning:  #1-D: last line of file ends without a newline
   /***********************end of file**************************/
 ..\HARDWARE\rtc.c: 3 warnings, 0 errors
-compiling key.c...
-compiling led.c...
-..\HARDWARE\LED\led.c(142): warning:  #177-D: variable "i"  was declared but never referenced
-  	unsigned char i=0;
-..\HARDWARE\LED\led.c: 1 warning, 0 errors
-compiling SendToServerDataType.c...
-..\HARDWARE\SendToServerDataType.c(64): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(Data_SendToServer[i].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(72): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(PriorityDataSendToServer[i].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(80): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(ManAlarmDataSendToServer[i].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(213): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(ManAlarmDataSendToServer[ManAlarm_Wr_Addr].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(214): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *restrict"
-  		memcpy(ManAlarmDataSendToServer[ManAlarm_Wr_Addr].data,data,lenth);
-..\HARDWARE\SendToServerDataType.c(237): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(PriorityDataSendToServer[SerPrio_Wr_Addr].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(238): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *restrict"
-  		memcpy(PriorityDataSendToServer[SerPrio_Wr_Addr].data,data,lenth);
-..\HARDWARE\SendToServerDataType.c(265): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *"
-  		memset(Data_SendToServer[Server_Wr_Addr].data,0,SERVER_DATA_NUM);
-..\HARDWARE\SendToServerDataType.c(266): warning:  #167-D: argument of type "volatile unsigned char *" is incompatible with parameter of type "void *restrict"
-  		memcpy(Data_SendToServer[Server_Wr_Addr].data,data,lenth);
-..\HARDWARE\SendToServerDataType.c(397): warning:  #177-D: variable "i"  was declared but never referenced
-  	  unsigned char i=0;
-..\HARDWARE\SendToServerDataType.c: 10 warnings, 0 errors
-compiling ProtocolBoard.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\ProtocolBoard.c: 1 warning, 0 errors
 compiling ServerAction.c...
 ..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -140,132 +93,6 @@ compiling ServerAction.c...
 ..\HARDWARE\ServerAction.c(300): warning:  #177-D: variable "pServer_Data"  was declared but never referenced
   	Server_Data_Typedef *pServer_Data=NULL;
 ..\HARDWARE\ServerAction.c: 6 warnings, 0 errors
-compiling wdg.c...
-compiling delay.c...
-assembling startup_stm32f10x_cl.s...
-compiling usart.c...
-compiling misc.c...
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_usart.c...
-..\FWLIB\STM32F10x_FWLib\src\stm32f10x_usart.c(1074): warning:  #1-D: last line of file ends without a newline
-  //}
-..\FWLIB\STM32F10x_FWLib\src\stm32f10x_usart.c: 1 warning, 0 errors
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_exti.c...
-compiling core_cm3.c...
-compiling sys.c...
-compiling stm32f10x_bkp.c...
-compiling stm32f10x_pwr.c...
-compiling stm32f10x_rtc.c...
-compiling stm32f10x_spi.c...
-compiling stm32f10x_dma.c...
-compiling stm32f10x_iwdg.c...
-compiling stm32f10x_tim.c...
-assembling cpu_a.asm...
-compiling stm32f10x_can.c...
-compiling cpu_core.c...
-compiling stm32f10x_adc.c...
-compiling cpu_c.c...
-compiling lib_ascii.c...
-compiling bsp.c...
-compiling lib_math.c...
-compiling os_cfg_app.c...
-compiling lib_str.c...
-compiling lib_mem.c...
-assembling lib_mem_a.asm...
-compiling os_core.c...
-compiling os_mutex.c...
-compiling os_flag.c...
-compiling os_mem.c...
-compiling os_int.c...
-compiling os_msg.c...
-compiling os_pend_multi.c...
-compiling os_dbg.c...
-compiling os_stat.c...
-compiling os_q.c...
-compiling os_sem.c...
-compiling os_time.c...
-assembling os_cpu_a.s...
-compiling os_task.c...
-compiling os_var.c...
-compiling os_prio.c...
-compiling os_app_hooks.c...
-compiling os_tmr.c...
-compiling os_cpu_c.c...
-compiling os_tick.c...
-compiling usart2.c...
-..\HARDWARE\APPNET\usart2.c(37): warning:  #177-D: variable "j"  was declared but never referenced
-  	u16 i,j; 
-..\HARDWARE\APPNET\usart2.c: 1 warning, 0 errors
-compiling usart3.c...
-compiling UsartMsgProcessDrv.c...
-..\HARDWARE\APPUART\UsartMsgProcessDrv.c(162): warning:  #940-D: missing return statement at end of non-void function "UARTx_Send_Data" 
-  }
-..\HARDWARE\APPUART\UsartMsgProcessDrv.c: 1 warning, 0 errors
-compiling net.c...
-..\HARDWARE\WileLess\bc95.h(127): warning:  #1295-D: Deprecated declaration Get_GPRS_Receive_Length - give arg types
-  u32 Get_GPRS_Receive_Length();
-..\HARDWARE\APPNET\net.c(120): warning:  #177-D: variable "cnt"  was declared but never referenced
-  	unsigned char cnt=0;	
-..\HARDWARE\APPNET\net.c(245): warning:  #177-D: variable "status"  was declared but never referenced
-  	unsigned char flag=0,status=0,W5_Flag=0;
-..\HARDWARE\APPNET\net.c(245): warning:  #177-D: variable "W5_Flag"  was declared but never referenced
-  	unsigned char flag=0,status=0,W5_Flag=0;
-..\HARDWARE\APPNET\net.c(335): warning:  #940-D: missing return statement at end of non-void function "NetStatus_Print" 
-  }
-..\HARDWARE\APPNET\net.c: 5 warnings, 0 errors
-compiling spi_flash.c...
-compiling MsgSPIProcessDrv.c...
-..\HARDWARE\APPSPI\MsgSPIProcessDrv.c(66): warning:  #177-D: variable "err"  was declared but never referenced
-  	OS_ERR err;
-..\HARDWARE\APPSPI\MsgSPIProcessDrv.c: 1 warning, 0 errors
-compiling w25q16.c...
-..\HARDWARE\APPFLASH\w25q16.c(971): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\APPFLASH\w25q16.c: 1 warning, 0 errors
-compiling uart5.c...
-compiling lcd.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\APPLCD\lcd.c: 1 warning, 0 errors
-compiling socket.c...
-compiling w5500.c...
-..\HARDWARE\W5500\W5500\w5500.c(371): warning:  #550-D: variable "a"  was set but never used
-    int16 a=0; 
-..\HARDWARE\W5500\W5500\w5500.c: 1 warning, 0 errors
-compiling utility.c...
-..\HARDWARE\W5500\W5500\utility.c(20): warning:  #550-D: variable "fac_ms"  was set but never used
-  static u16 fac_ms=0;																										/*ms延时倍乘数*/
-..\HARDWARE\W5500\W5500\utility.c: 1 warning, 0 errors
-compiling w5500_Ctl.c...
-compiling MsgCANProcessDrv.c...
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c(140): warning:  #177-D: variable "cpu_sr"  was declared but never referenced
-      CPU_SR_ALLOC();
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c(197): warning:  #550-D: variable "Flag"  was set but never used
-  	u8	Flag = 0;
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c(422): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c(251): warning:  #177-D: variable "CAN_Rx_Cnt"  was declared but never referenced
-  static unsigned char CAN_Rx_Cnt=0;
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c(256): warning:  #177-D: function "Reset_CANRxBuf"  was declared but never referenced
-  static void Reset_CANRxBuf(void)    //复位CAN接收数组
-..\HARDWARE\APPCAN\MsgCANProcessDrv.c: 5 warnings, 0 errors
-compiling w5500_conf.c...
-..\HARDWARE\W5500\W5500\w5500_conf.c(288): warning:  #177-D: variable "err"  was declared but never referenced
-   		OS_ERR err;
-..\HARDWARE\W5500\W5500\w5500_conf.c(426): warning:  #177-D: variable "dAddr"  was declared but never referenced
-  	uint16 dAddr=0;
-..\HARDWARE\W5500\W5500\w5500_conf.c: 2 warnings, 0 errors
-compiling dns.c...
-..\HARDWARE\W5500\Internet\dns.c(423): warning:  #177-D: variable "c"  was declared but never referenced
-  	unsigned char b=0,c=0;
-..\HARDWARE\W5500\Internet\dns.c: 1 warning, 0 errors
-compiling dhcp.c...
-compiling tcp_demo.c...
-..\HARDWARE\W5500\Internet\tcp_demo.c(122): warning:  #177-D: variable "Snflag"  was declared but never referenced
-    static unsigned char Snflag=0;
-..\HARDWARE\W5500\Internet\tcp_demo.c: 1 warning, 0 errors
-compiling choicedevice.c...
 compiling DeviceCommon.c...
 ..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -276,88 +103,16 @@ compiling DeviceCommon.c...
 ..\HARDWARE\PROALY\PluginHlib\DeviceCommon.c(166): warning:  #940-D: missing return statement at end of non-void function "RecieveMCOperationStatusAndSend" 
   }
 ..\HARDWARE\PROALY\PluginHlib\DeviceCommon.c: 4 warnings, 0 errors
-compiling ReceiveDataBuffer.c...
-..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(281): warning:  #177-D: variable "i"  was declared but never referenced
-  	unsigned char i=0;
-..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(370): warning:  #223-D: function "delay_ms" declared implicitly
-  		delay_ms(1);
-..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(197): warning:  #177-D: variable "CAN_Rx_Cnt"  was declared but never referenced
-  static unsigned char CAN_Rx_Cnt=0;
-..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c(201): warning:  #177-D: function "Reset_CANRxBuf"  was declared but never referenced
-  static void Reset_CANRxBuf(void)
-..\HARDWARE\PROALY\PluginHlib\ReceiveDataBuffer.c: 4 warnings, 0 errors
 compiling app.c...
 ..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
   #endif 
 ..\HARDWARE\PROALY\app.c(227): warning:  #1-D: last line of file ends without a newline
   }
 ..\HARDWARE\PROALY\app.c: 2 warnings, 0 errors
-compiling CAN1ProtocolParsing.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c(232): warning:  #177-D: variable "a"  was declared but never referenced
-  	unsigned int a=0;
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c(490): warning:  #177-D: variable "length"  was declared but never referenced
-  	unsigned int length=0,RegisterSave=0;
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c(490): warning:  #177-D: variable "RegisterSave"  was declared but never referenced
-  	unsigned int length=0,RegisterSave=0;
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c(491): warning:  #177-D: variable "Res"  was declared but never referenced
-  	unsigned char  Res=0;
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c(492): warning:  #177-D: variable "i"  was declared but never referenced
-  	unsigned char i=0;
-..\HARDWARE\APPCAN\CAN1ProtocolParsing.c: 6 warnings, 0 errors
-compiling PrinterATrev.c...
-..\HARDWARE\APPATcmd\PrinterATrev.c(123): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\APPATcmd\PrinterATrev.c: 1 warning, 0 errors
-compiling PrinterATcmd.c...
-..\HARDWARE\APPATcmd\PrinterATcmd.c(26): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
-  	j=strlen(Sting1);
-..\HARDWARE\APPATcmd\PrinterATcmd.c(60): warning:  #223-D: function "data_transform" declared implicitly
-  				  *(str+j)=data_transform(*(C1+i));
-..\HARDWARE\APPATcmd\PrinterATcmd.c(106): warning:  #177-D: variable "j"  was declared but never referenced
-  	u8 i=0,j=0;
-..\HARDWARE\APPATcmd\PrinterATcmd.c(145): warning:  #177-D: variable "BackFlag"  was declared but never referenced
-  		unsigned char BackFlag=0;
-..\HARDWARE\APPATcmd\PrinterATcmd.c(44): warning:  #177-D: function "data_transform_A"  was declared but never referenced
-  static u8 data_transform_A(u8 data)
-..\HARDWARE\APPATcmd\PrinterATcmd.c: 5 warnings, 0 errors
-compiling D026_HW200.c...
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\PROALY\PluginClib\D026_HW200.c(101): warning:  #177-D: variable "Status"  was declared but never referenced
-  	unsigned short Status=0;
-..\HARDWARE\PROALY\PluginClib\D026_HW200.c(305): warning:  #177-D: variable "Senddata"  was declared but never referenced
-  	unsigned char Senddata=0x51;  
-..\HARDWARE\PROALY\PluginClib\D026_HW200.c(332): warning:  #177-D: variable "len"  was declared but never referenced
-  	unsigned int len=0;
-..\HARDWARE\PROALY\PluginClib\D026_HW200.c: 4 warnings, 0 errors
-compiling BTfunction.c...
-..\HARDWARE\BTfunction\BTfunction.c(244): warning:  #177-D: variable "i"  was declared but never referenced
-  	  unsigned char i,j;
-..\HARDWARE\BTfunction\BTfunction.c(244): warning:  #177-D: variable "j"  was declared but never referenced
-  	  unsigned char i,j;
-..\HARDWARE\BTfunction\BTfunction.c(245): warning:  #177-D: variable "nbr"  was declared but never referenced
-  	  unsigned short z,nbr=0;	
-..\HARDWARE\BTfunction\BTfunction.c(271): warning:  #177-D: variable "address"  was declared but never referenced
-  		static unsigned int address=APP_DownLoadAddress;
-..\HARDWARE\BTfunction\BTfunction.c: 4 warnings, 0 errors
-compiling bc95.c...
-..\HARDWARE\WileLess\bc95.h(127): warning:  #1295-D: Deprecated declaration Get_GPRS_Receive_Length - give arg types
-  u32 Get_GPRS_Receive_Length();
-..\HARDWARE\rtc.h(26): warning:  #1-D: last line of file ends without a newline
-  #endif 
-..\HARDWARE\WileLess\bc95.c(1259): warning:  #223-D: function "itoa" declared implicitly
-  	itoa((DataLen+2), ReadData, Len);				//转换成字符串
-..\HARDWARE\WileLess\bc95.c(1599): warning:  #1-D: last line of file ends without a newline
-  }
-..\HARDWARE\WileLess\bc95.c(1585): warning:  #177-D: variable "gUARTSystemParameter"  was declared but never referenced
-  	UARTParameterConfiguration gUARTSystemParameter;
-..\HARDWARE\WileLess\bc95.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=74672 RO-data=1480 RW-data=848 ZI-data=47464  
+Program Size: Code=74672 RO-data=1624 RW-data=848 ZI-data=47464  
 FromELF: creating hex file...
-"..\OBJ\FB1010_HW5000_9600_15.axf" - 0 Error(s), 100 Warning(s).
+"..\OBJ\FB1010_HW5000_9600_15.axf" - 0 Error(s), 34 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -370,7 +125,7 @@ Package Vendor: Keil
   d:\Users\zhaopeng\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:10
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

@@ -4,8 +4,8 @@
 #include "stm32f10x.h"  
 #include "HRSTDDEF.h"
 
-#define UartInterface                   USART2
-#define UartInterface_485               USART3
+#define UartInterface                   USART3
+#define UartInterface_485               USART2
 
 extern unsigned char PushButtonStatus;
 extern volatile unsigned char SystemTime[6];

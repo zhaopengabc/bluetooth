@@ -44,14 +44,14 @@ tMCSystemOperationStatus 	sMCSystemOperationStatus_ZJ;  //操作信息数据结构体
 static void ZJ_Plugin_Init(void)//初始化
 {
     //初始化UART参数；
-	gUARTSystemParameter.USARTx_BaudRate=2400;
+	gUARTSystemParameter.USARTx_BaudRate=115200;
 	gUARTSystemParameter.USARTx_WordLength=USART_WordLength_8b;
 	gUARTSystemParameter.USARTx_StopBits=USART_StopBits_1;
 	gUARTSystemParameter.USARTx_Parity=USART_Parity_No;
 	gUARTSystemParameter.USARTx_HardwareFlowControl=USART_HardwareFlowControl_None;
 //	gUARTSystemParameter.USARTx_Mode=USART_Mode_Tx;
 	gUARTSystemParameter.USARTx_Mode=USART_Mode_Rx | USART_Mode_Tx;
-	gUARTSystemParameter.UARTx_IRQn=USART2_IRQn;
+	gUARTSystemParameter.UARTx_IRQn=USART3_IRQn;
 	gUARTSystemParameter.NVIC_Priority=0;	
 	gUARTSystemParameter.NVIC_SubPriority=3;		
 }
@@ -329,10 +329,15 @@ unsigned int ZJ_Analysis(unsigned char *data,unsigned int lenth)
 void ZJ_Plugin_Run(void)		//协议解析启动
 {
 	unsigned int Flag=0;
+	unsigned int Flag_tmp=0;
 	unsigned int len=0;
-	unsigned char Senddata=0x31;
+	unsigned char Senddata[3]={0x2b,0x2b,0x2b};
 	//读取数据
-
+	if(Flag_tmp == 0)
+	{
+	    UARTx_Send_Data(UartInterface,(unsigned char *)&Senddata,3);
+		Flag_tmp = 1;
+	}
 	Data_RecieveFromHost.Lenth=RS485_Read(Data_RecieveFromHost.data);
 	
 	if(Data_RecieveFromHost.Lenth!=0)

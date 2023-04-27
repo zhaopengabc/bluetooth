@@ -77,7 +77,7 @@ void bsp_init(void)
 	uart_init(115200);    //串口波特率设置
 	LED_Init();         //LED初始化
 	KEY_Init();
-  IWDG_Init(IWDG_Prescaler_256, 2500);//打开看门狗
+ // IWDG_Init(IWDG_Prescaler_256, 2500);//打开看门狗
   Buzzer_Init();
 	Voice_Init();
 	PowerDetec_Init();

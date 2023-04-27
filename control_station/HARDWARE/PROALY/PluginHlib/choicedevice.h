@@ -132,7 +132,9 @@
 #include "D026_HW200.h"
 #define UARTBUFFER_Enable 
 //#define MCLineJudge_Enable 
-#define RS232_Enable
+//#define RS232_Enable
+#define RS485_Enable
+
 #endif
 
 #ifdef  D025_XM_AnDe2008

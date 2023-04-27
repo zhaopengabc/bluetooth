@@ -151,7 +151,7 @@ void ProalyInit(void)
 //定义主机RS485，串口3;								
 #if defined RS485_Enable  
      GPIO_RS485_Init();//RS485;
-	   USARTx_Mode_Init(USART3,gUARTSystemParameter);//串口2初始化；								
+	   USARTx_Mode_Init(USART3,gUARTSystemParameter);//串口3初始化；								
 #endif
 	
 }
@@ -201,7 +201,7 @@ void USART2_IRQHandler(void)
 }
 #endif
 
-/*UART2中断函数*/  //主机RS232接口\主机RS485接口\打印机串口
+/*UART3中断函数*/  //主机RS232接口\主机RS485接口\打印机串口
 #if defined RS485_Enable
 void USART3_IRQHandler(void)
 {
